@@ -30,9 +30,9 @@ As you can see above, we have two different components `ProductDetailComponent` 
 
 ### How render props work
 
-Lets reverse engineer the `FetchDataComponent` in order see how this works
+Let's reverse engineer the `FetchDataComponent` in order see how this works.
 
-Lets zoom into the code again
+Let's zoom into the code again.
 
 ```jsx
 <FetchDataComponent 
@@ -41,22 +41,24 @@ Lets zoom into the code again
 />
 ```
 
-Our `FetchDataComponent` has an attribute `render` that takes a function that returns JSX markup. **Here is the thing**, the whole render-props pattern is about you invoking a function in your return method, let s me show you this by code:
+Our `FetchDataComponent` has a `render` feature that takes a function that returns JSX markup. **Here is the thing**, the whole render-props pattern is about you invoking a function in your return method.
 
+
+Let me show you this by code:
 ```jsx
 const FetchDataComponent = ({ url, render }) => render()
 ```
 
-This is simply the  `render-props pattern`.
-The way we used the `FetchDataComponent` means we at least need to send something into the `render()` call. Let's extract the function invocation and have a look at it:
+This is simply the  **render-props pattern**
+The way we used the `FetchDataComponent` means we at least need to send something into the `render()` call. Let us extract the function invocation and have a look at it:
 
 ```js
 (data) => <ProductDetailComponent product={data.product} />
 ```
 
-As we can see above that we need a parameter data and data seems to be an object, so where does this data come from? 
+As you can see from the above mentioned, you need a parameter data and data can be seen as an object, so where does this data come from? 
 
-Well thats the thing with our `FetchDataComponent`, it does some heavy lifting for us namely carrying out HTTP calls.
+Well that is a thing with our `FetchDataComponent`, it does some heavy lifting for us namely carrying out HTTP calls.
 
 ### Lets take a deep look into how the component might look
 
