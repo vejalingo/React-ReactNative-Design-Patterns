@@ -4,7 +4,7 @@ A way to use structured components together to share an implicit state, and allo
 
 -   Use React API to transform some of the components
 
-Think of compound components like the `<select>` and `<option>` elements in HTML. Apart they don’t do too much, but together they allow you to create the complete experience. 
+Think of compound components like the `<select>` and `<option>` elements in HTML. If these components are apart they don’t do too much, However if they are together, they allow you to create the complete experience. 
 > Kent C. Dodds
 
 ```html
@@ -14,7 +14,7 @@ Think of compound components like the `<select>` and `<option>` elements in HTML
 </select>
 ```
 
-The `<select>` is the element responsible for managing the state of the UI, and the `<option>` elements are essentially more configuration for how the select should operate (specifically, which options are available and their values). 
+The `<select>` is the element responsible for managing the state of the UI, and the `<option>` elements are essential in order to facilitate futher configuration for the way in which the select element should operate (specifically, which options are available and their values).
 
 Let's imagine that we were going to implement this native control manually. A naive implementation would look something like this:
 
@@ -29,9 +29,9 @@ Let's imagine that we were going to implement this native control manually. A na
 />
 ```
 
-This works fine, but it's less extensible/flexible than a compound components API. For example. What if I want to supply additional attributes on the `<option>` that's rendered, or I want the display to change based on whether it's selected? We can easily add API surface area to support these use cases, but that's just more for us to code and more for users to learn. That's where compound components come in really handy!
+This works fine, but it is less extensible/flexible than a compound components API. For example; if you want to supply additional features to the `<option>` element that is rendered, or if you want to display in order to change based on whether it's selected? You can easily add API surface area to support these use cases, but in turn it simply means that it is just more for you to code and ultimately more for users to learn. That is  where compound components come in really handy!
 
-Here’s what it looks like when using the compound component pattern:
+Here is what it looks like when using the compound component pattern:
 
 ```jsx
 <CustomSelect value={value} onChange={handleSelectChange}>
@@ -44,7 +44,7 @@ As you can see now the component is now expressed in a more declarative fashion.
 
 ### Why do I need it when I have render props?
 
-[Render props](../render-props-pattern/) is a great pattern. It is very versatile and easy to understand. However this doesn’t mean that we have to use it everywhere. If used carelessly it can lead to obfuscated code.
+[Render props](../render-props-pattern/) is a great pattern. It is very versatile and easy to understand,  However this doesn’t mean that we have to use it everywhere. If used carelessly it can lead to obfuscated code.
 
 ### Benefits of compound component pattern
 
