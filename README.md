@@ -6,6 +6,7 @@
 - [Render Props](/render-props-pattern/)
 - [State Initializer](/state-initializer-pattern)
 - [Provider Pattern](#provider-pattern)
+- [Hooks](/hooks)
 - [Styling Patterns](#styling-patterns)
 - [Combining Patterns](#combining-patterns)
 
