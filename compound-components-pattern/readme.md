@@ -37,7 +37,7 @@ Here is what it looks like when using the compound component pattern:
 <CustomSelect value={value} onChange={handleSelectChange}>
   <CustomSelect.Option value="1">Option 1</CustomSelect.Option>
   <CustomSelect.Option value="2">Option 2</CustomSelect.Option>
-</Select>;
+</CustomSelect>;
 ```
 
 As you can see now the component is now expressed in a more declarative fashion.
