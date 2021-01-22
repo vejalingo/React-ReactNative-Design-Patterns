@@ -114,11 +114,11 @@ export {
 }
 ```
 
-Here we have given undefined as the default value to the context. This default value, in general; is used whenever we try to use the value of context objects in components that are not the decendants of the provider of this context object.
+Here we have given undefined as the default value to the context. This default value in general is used whenever we try to use the value of context objects in components that are not the decendants of the provider of this context object.
 
 We are giving an array to the value prop of `UserContext.Provider`. This array has value to users for them to state and has a function of changeUser that is calculating a random number from 1 to 10 and storing it in a state called random.
 
-We are making an Ajax call to our endpoint in the `useEffect` Hook, which has only random state in its dependency array. That means this effect will only execute when our random state changes.
+We are making an Ajax call to our endpoint in the `useEffect` hook, which has only random state in its dependency array. Which means this effect will only execute when our random state changes.
 
 In the return statement; we are writing the main context provider logic, which will pass down the values to all consumers which are its descendants.
 
@@ -128,7 +128,7 @@ In the return statement; we are writing the main context provider logic, which w
 </UserContext.Provider>
 ```
 
-After our custom provider, we have created our custom Hook. In this Hook; first we are using a `useContext` hook to get the value of context object. After that, to prevent accidental usage of our custom Hook in any non-descendant component, we are checking whether the value obtained using `useContext` is equal to our defaultValue given during the creation of our context object. In our case, this default value is undefined. If the value is undefined, then we can say that our custom Hook is used in any non-descendant component.
+After our custom provider, we have created our custom Hook. In this Hook; firstly we are using a `useContext` hook to get the value of context object. After that, in order to prevent accidental usage of our custom Hook in any non-descendant component, we are checking whether the value obtained using `useContext` is equal to our defaultValue given during the creation of our context object. In our case, this default value is undefined. If the value is undefined, then we can say that our custom Hook is used in any non-descendant component.
 
 ```js
 //undefined is given as default value
