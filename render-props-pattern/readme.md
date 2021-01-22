@@ -132,4 +132,4 @@ Now, We could use this component like this:
 **Challenge**
 try to extend this component by adding a render prop for the loading state
 
-Next [>> Render props](../controlling-state-pattern/readme) 
+Next [>> Render props](../controlling-state-pattern/) 

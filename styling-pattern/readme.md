@@ -58,4 +58,4 @@ export default SayName
 
 > This is the most scalable approach and will allow you to write `Clean Code` and overall improve code quality
 
-Next [>> Putting it all together](../combining-patterns/readme)
+Next [>> Putting it all together](../combining-patterns/)

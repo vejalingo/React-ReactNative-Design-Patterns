@@ -44,7 +44,7 @@ As you can see now the component is now expressed in a more declarative fashion.
 
 ### Why do I need it when I have render props?
 
-[Render props](../render-props-pattern/readme) is a great pattern. It is very versatile and easy to understand. However this doesn’t mean that we have to use it everywhere. If used carelessly it can lead to obfuscated code.
+[Render props](../render-props-pattern/) is a great pattern. It is very versatile and easy to understand. However this doesn’t mean that we have to use it everywhere. If used carelessly it can lead to obfuscated code.
 
 ### Benefits of compound component pattern
 
@@ -113,4 +113,4 @@ export default App
 
 
 
-Next [>> Render props](../render-props-pattern/readme) 
+Next [>> Render props](../render-props-pattern/) 

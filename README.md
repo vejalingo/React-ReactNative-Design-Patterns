@@ -2,8 +2,8 @@
 
 
 - [Introduction](#introduction)
-- [Compound Components](/compound-components-pattern/readme)
-- [Render Props](/render-props-pattern/readme)
+- [Compound Components](/compound-components-pattern/)
+- [Render Props](/render-props-pattern/)
 - [State Initializer](/state-initializer-pattern)
 - [Provider Pattern](#provider-pattern)
 - [Styling Patterns](#styling-patterns)

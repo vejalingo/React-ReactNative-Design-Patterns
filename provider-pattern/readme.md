@@ -137,4 +137,4 @@ const UserContext = React.createContext(undefined);
 
 Then, from our custom Hook, we return the obtained context value.
 
-Next [>> Styling Patterns](../styling-pattern/readme)
+Next [>> Styling Patterns](../styling-pattern/)
