@@ -8,7 +8,7 @@
 
 With React Native, you style your application using JavaScript. All of the core components accept a prop named style. The style names and values usually match how CSS works on the web, except names are written using camel casing, e.g. backgroundColor rather than background-color.
 
-The `style` prop can be a plain old JavaScript object. That's what we usually use for example code. You can also pass an array of styles - the last style in the array has precedence, so you can use this to inherit styles.
+The `style` prop can be a plain old JavaScript object. That is what we usually use for example code. You can also pass an array of styles - the last style in the array has precedence, so you can use this to inherit styles.
 
 ```jsx
 import React from "react"
@@ -22,18 +22,18 @@ import { customStyles } = "./customStyles"
 export const SayName = name => <Text style={{ color: "red", fontSize: 20 }}>Hello World, My name is: {name}</Text>
 ```
 
-> Array of styles
+> Array of styles:
 
 ```jsx
 export const SayName = name => <Text style={[customStyles, { color: "red", fontSize: 20 }]}>Hello World, My name is: {name}</Text>
 ```
 
-As a component grows in complexity, it is often cleaner to use [StyleSheet.create](#stylesheet-component) to define several styles in one place
+As a component grows in complexity, it is often a cleaner to use [StyleSheet.create](#stylesheet-component) to define several styles in one place
 
 
 ### Stylesheet Component
 
-A StyleSheet is an abstraction similar to CSS StyleSheets
+A StyleSheet is an abstraction similar to CSS StyleSheets:
 
 ```jsx
 const SayName = name => (
