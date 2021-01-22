@@ -1,14 +1,14 @@
 ## Provider Pattern
 
-React’s provider pattern is a powerful concept. React uses provider pattern in Context API to share data across the tree descendant nodes. You may not find this useful when you are using plain react. However, this pattern comes handy when you are designing a complex app since it solves multiple problems.
+React’s provider pattern is a powerful concept. React uses provider pattern in Context API to share data across the tree descendant nodes. You may not find this useful when you are using plain react. However, this pattern comes handy when you are designing a complex app since as it solves multiple problems.
 
 ### What is React’s context API?
 
-React Context API is a way to essentially create global variables that can be passed around in a React app. This is the alternative to "prop drilling", or passing props from grandparent to parent to child, and so on. Context is often touted as a simpler, lighter solution to using Redux for state management.
+React Context API is a way to essentially create global variables that can be passed around in a React app. This is an alternative to "prop drilling", or passing props from grandparent to parent to the child and so on. Context is often touted as a simpler or a ighter solution to using Redux for state management.
 
 ### Provider pattern and Context API
 
-Provider pattern, however, is not only about react context. You might have used a state management library like redux and mobX. Here provider is the top most component and it is provided by `react-redux`. We write it the following way:
+Provider pattern: However, it is not only about react context. You might have used a state management library like redux and mobX. Here provider is the top most component and it is provided by `react-redux`. We write it the following way:
 
 ```jsx
 import React from 'react';
@@ -56,7 +56,7 @@ const value = useContext(MyContext);
 
 ### Lets look at an example
 
-We will create one custom provider `UserProvider` which will be used to provide the value down to every descendant. To consume that value, we will create one custom Hook `useUser`.
+We will create one custom provider `UserProvider`, which will be used to provide the value down to every descendant. To consume that value; we will create one custom Hook `useUser`.
 
 ```jsx
 import React, {
@@ -114,13 +114,13 @@ export {
 }
 ```
 
-Here we have given undefined as the default value to the context. This default value, in general, is used whenever we try to use the value of context objects in components that are not the decendants of the provider of this context object.
+Here we have given undefined as the default value to the context. This default value, in general; is used whenever we try to use the value of context objects in components that are not the decendants of the provider of this context object.
 
-We are giving an array to the value prop of `UserContext.Provider`. This array has the value of user state and a function changeUser that is calculating a random number from 1 to 10 and storing it in a state called random.
+We are giving an array to the value prop of `UserContext.Provider`. This array has value to users for them to state and has a function of changeUser that is calculating a random number from 1 to 10 and storing it in a state called random.
 
 We are making an Ajax call to our endpoint in the `useEffect` Hook, which has only random state in its dependency array. That means this effect will only execute when our random state changes.
 
-In the return statement, we are writing the main context provider logic, which will pass down the values to all consumers which are its descendants.
+In the return statement; we are writing the main context provider logic, which will pass down the values to all consumers which are its descendants.
 
 ```jsx
 <UserContext.Provider value={data}>
@@ -128,13 +128,13 @@ In the return statement, we are writing the main context provider logic, which w
 </UserContext.Provider>
 ```
 
-After our custom provider, we have created our custom Hook. In this Hook, first we are using a `useContext` Hook to get the value of context object. After that, to prevent accidental usage of our custom Hook in any non-descendant component, we are checking whether the value obtained using `useContext` is equal to our defaultValue given during the creation of our context object. In our case, this default value is undefined. If the value is undefined, then we can say that our custom Hook is used in any non-descendant component.
+After our custom provider, we have created our custom Hook. In this Hook; first we are using a `useContext` hook to get the value of context object. After that, to prevent accidental usage of our custom Hook in any non-descendant component, we are checking whether the value obtained using `useContext` is equal to our defaultValue given during the creation of our context object. In our case, this default value is undefined. If the value is undefined, then we can say that our custom Hook is used in any non-descendant component.
 
 ```js
 //undefined is given as default value
 const UserContext = React.createContext(undefined);
 ```
 
-Then, from our custom Hook, we return the obtained context value.
+Thus, from our custom Hook, we return the obtained context value.
 
 Next [>> Styling Patterns](../styling-pattern/)
