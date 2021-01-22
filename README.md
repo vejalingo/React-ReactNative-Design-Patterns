@@ -7,7 +7,7 @@
 - [State Initializer](/state-initializer-pattern)
 - [Provider Pattern](/provider-pattern)
 - [Hooks](/hooks-patterns/)
-- [Styling Patterns](#styling-patterns)
+- [Styling Patterns](/styling-patterns)
 - [Combining Patterns](#combining-patterns)
 
 ## Introduction
